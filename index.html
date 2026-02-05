@@ -2,8 +2,73 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <title>YouTube Clone</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body></body>
+  <body>
+    <!-- Top Nav -->
+    <header class="top-nav">
+      <div class="nav-left">
+        <div class="menu-btn">☰</div>
+        <div class="logo">MyTube</div>
+      </div>
+
+      <div class="nav-center">
+        <input type="text" placeholder="Search" />
+        <button>🔍</button>
+      </div>
+
+      <div class="nav-right">
+        <div class="avatar">L</div>
+      </div>
+    </header>
+
+    <div class="layout">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-item active">Home</div>
+        <div class="sidebar-item">Shorts</div>
+        <div class="sidebar-item">Subscriptions</div>
+        <hr />
+        <div class="sidebar-item">Library</div>
+        <div class="sidebar-item">History</div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="content">
+        <div id="video-grid" class="video-grid">
+          <!-- JS will render videos here -->
+        </div>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
 </html>
+
+<!-- <!doctype html>
+<html>
+  <head>
+    <title>YouTube Clone</title>
+  </head>
+  <body>
+    <h1>Videos</h1>
+    <div id="video-list"></div>
+
+    <script>
+      fetch("/videos")
+        .then((res) => res.json())
+        .then((videos) => {
+          const list = document.getElementById("video-list");
+          videos.forEach((v) => {
+            const link = document.createElement("a");
+            link.href = "/video/" + v.id;
+            link.textContent = v.title;
+            list.appendChild(link);
+            list.appendChild(document.createElement("br"));
+          });
+        });
+    </script>
+  </body>
+</html> -->

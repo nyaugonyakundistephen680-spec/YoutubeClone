@@ -1,0 +1,303 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #0f0f0f;
+}
+
+/* Top Nav */
+.top-nav {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-left,
+.nav-center,
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.menu-btn {
+  font-size: 20px;
+  cursor: pointer;
+  margin-right: 16px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+  color: red;
+}
+
+.nav-center input {
+  width: 400px;
+  height: 36px;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 18px 0 0 18px;
+  outline: none;
+}
+
+.nav-center button {
+  height: 36px;
+  width: 60px;
+  border: 1px solid #ccc;
+  border-left: none;
+  background: #f0f0f0;
+  border-radius: 0 18px 18px 0;
+  cursor: pointer;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #1976d2;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* Layout */
+.layout {
+  display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: #fff;
+  height: calc(100vh - 56px);
+  padding: 12px 0;
+  border-right: 1px solid #ddd;
+}
+
+.sidebar-item {
+  padding: 10px 24px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.sidebar-item:hover {
+  background: #f2f2f2;
+}
+
+.sidebar-item.active {
+  background: #e5e5e5;
+  font-weight: bold;
+}
+
+.sidebar hr {
+  margin: 12px 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+/* Content */
+.content {
+  flex: 1;
+  padding: 24px;
+}
+
+/* Video Grid */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+/* Video Card */
+.video-card {
+  cursor: pointer;
+}
+
+.thumbnail {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-info {
+  display: flex;
+  margin-top: 12px;
+}
+
+.channel-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #bbb;
+  margin-right: 12px;
+}
+
+.video-text h4 {
+  font-size: 14px;
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+.video-text p {
+  font-size: 12px;
+  color: #606060;
+}
+
+/* Watch Page Layout */
+.watch-layout {
+  display: flex;
+  padding: 24px;
+  gap: 24px;
+}
+
+/* Main Column */
+.watch-main {
+  flex: 3;
+}
+
+/* Video Player */
+.video-player {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: black;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.video-player iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Title & Stats */
+.watch-title {
+  font-size: 18px;
+  margin: 8px 0;
+}
+
+.watch-stats {
+  font-size: 14px;
+  color: #606060;
+  margin-bottom: 12px;
+}
+
+/* Channel Row */
+.channel-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.channel-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.channel-name {
+  font-weight: bold;
+}
+
+.subscriber-count {
+  font-size: 12px;
+  color: #606060;
+}
+
+.subscribe-btn {
+  background: black;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* Description */
+.video-description {
+  background: #f2f2f2;
+  padding: 12px;
+  border-radius: 8px;
+  margin: 12px 0;
+  font-size: 14px;
+}
+
+/* Comments */
+.comments-section h3 {
+  margin-bottom: 12px;
+}
+
+.comment {
+  margin-bottom: 16px;
+}
+
+.comment-author {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.comment-text {
+  font-size: 14px;
+}
+
+/* Sidebar */
+.watch-sidebar {
+  flex: 1.2;
+}
+
+.recommend-card {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.recommend-thumb {
+  width: 160px;
+  aspect-ratio: 16 / 9;
+  background: #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.recommend-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.recommend-info h5 {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.recommend-info p {
+  font-size: 12px;
+  color: #606060;
+}

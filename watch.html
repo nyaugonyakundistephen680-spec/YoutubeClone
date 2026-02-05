@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Watch | MyTube</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Top Nav (same as homepage) -->
+    <header class="top-nav">
+      <div class="nav-left">
+        <div class="menu-btn">☰</div>
+        <div class="logo">MyTube</div>
+      </div>
+
+      <div class="nav-center">
+        <input type="text" placeholder="Search" />
+        <button>🔍</button>
+      </div>
+
+      <div class="nav-right">
+        <div class="avatar">L</div>
+      </div>
+    </header>
+
+    <div class="watch-layout">
+      <!-- Main video column -->
+      <main class="watch-main">
+        <div id="video-player" class="video-player">
+          <!-- iframe inserted by JS -->
+        </div>
+
+        <h1 id="video-title" class="watch-title"></h1>
+
+        <div class="watch-stats">
+          <span id="video-views"></span>
+          <span id="video-date"></span>
+        </div>
+
+        <div class="channel-row">
+          <div class="channel-left">
+            <div class="channel-avatar"></div>
+            <div>
+              <div id="channel-name" class="channel-name"></div>
+              <div id="subscriber-count" class="subscriber-count"></div>
+            </div>
+          </div>
+
+          <button class="subscribe-btn">Subscribe</button>
+        </div>
+
+        <div id="video-description" class="video-description"></div>
+
+        <div class="comments-section">
+          <h3>Comments</h3>
+          <div id="comments"></div>
+        </div>
+      </main>
+
+      <!-- Sidebar -->
+      <aside class="watch-sidebar">
+        <h4>Up next</h4>
+        <div id="recommended-videos"></div>
+      </aside>
+    </div>
+
+    <script src="watch.js"></script>
+  </body>
+</html>
