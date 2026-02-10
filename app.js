@@ -180,7 +180,7 @@ function renderVideos(videos) {
 
     card.addEventListener("click", () => {
       console.log("Clicked video:", video.id);
-      Later: window.location.href = `/pages/watch.html?v=${video.id}`;
+      window.location.href = `/pages/watch.html?v=${video.id}`;
     });
 
     videoGrid.appendChild(card);
