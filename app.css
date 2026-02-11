@@ -1,0 +1,373 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #0f0f0f;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+header {
+  display: flex;
+  width: 100%;
+  height: 9%;
+  padding: 0 1rem;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.5rem;
+}
+
+.nav-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #333;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative; /* needed for absolute centering */
+  overflow: hidden;
+
+  transition: all 0.2s ease;
+}
+
+.nav-btn:hover {
+  border-color: #666;
+  transform: scale(1.05);
+}
+
+/* Center the icon perfectly */
+.nav-icon-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%; /* size of the icon relative to button */
+  height: 60%;
+  transform: translate(-50%, -50%);
+}
+
+.nav-icon-container svg {
+  width: 100%;
+  height: 100%;
+  display: block; /* fixes inline spacing issues */
+}
+
+.avatar {
+  padding: 0; /* remove default padding to match image size */
+  width: 50px; /* control the button size */
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden; /* ensures the image is clipped to circle */
+  border: 1px solid #333;
+  cursor: pointer;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* First group */
+.group-1 {
+  display: flex;
+  align-items: center;
+  width: 20%;
+  height: 100%;
+  gap: 1rem;
+}
+
+.nav-menu {
+  border: none;
+  font-size: 1.3rem;
+  background-color: transparent;
+}
+
+.logo {
+  font-weight: 500;
+  color: red;
+}
+
+/* Second group */
+.group-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  height: 100%;
+  width: 50%;
+}
+
+.group-2 input {
+  width: 80%;
+  max-width: 80%;
+  border: solid 1px #333;
+  padding: 10px;
+  border-radius: 1rem;
+}
+
+/* Third Group */
+.group-3 {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  margin-right: 1rem;
+  gap: 1rem;
+  height: 100%;
+  width: 30%;
+}
+
+/*layout */
+
+/* Sidebar layout */
+.layout {
+  display: flex;
+  width: 100%;
+  height: 91%; /* full height - the nav height */
+  overflow-x: hidden;
+}
+
+.side-menu {
+  width: 80px; /* sidebar width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  overflow: hidden;
+}
+
+/* Each button */
+.side-menu-btn {
+  display: flex;
+  flex-direction: column; /* icon on top, label below */
+  align-items: center;
+  justify-content: center;
+
+  width: 60px; /* button width */
+  /* height will expand to fit icon + label */
+  margin-bottom: 20px;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.side-menu-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Icon container */
+.side-menu-btn-container {
+  width: 50px; /* fixed size for the circle icon */
+  height: 50px;
+  border-radius: 50%; /* makes the icon background circular if needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px; /* space between icon and label */
+  /* border: 1px solid #333; */
+  border: none;
+  background-color: transparent;
+}
+
+.side-menu-btn-container svg {
+  width: 60%; /* scale the icon inside the container */
+  height: 60%;
+  color: #333; /* icon color */
+  display: block;
+  fill: currentColor;
+}
+
+/* Label below the icon */
+.side-menu-btn h3,
+.side-menu-btn p {
+  margin: 0;
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: #000;
+  text-align: center;
+  line-height: 1;
+}
+
+/* Main Layout */
+
+/* Skeleton Videos */
+.video-skeleton {
+  background: #ddd;
+  border-radius: 12px;
+  aspect-ratio: 16 / 9;
+  position: relative;
+  animation: shimmer 3s infinite forwards;
+  transition: all 3s ease;
+}
+
+@keyframes loading-skeleton {
+  0% {
+    background-color: #ddd;
+  }
+  50% {
+    background-color: #8a8787;
+  }
+
+  100% {
+    background-color: #ddd;
+  }
+}
+
+/* Content */
+.content {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  flex: 1;
+  padding: 24px;
+}
+
+/* Video Grid */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+/* Video Card */
+.video-card {
+  cursor: pointer;
+}
+
+.thumbnail {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-info {
+  display: flex;
+  margin-top: 12px;
+}
+
+.channel-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #bbb;
+  margin-right: 12px;
+}
+
+.video-text h4 {
+  font-size: 14px;
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+.video-text p {
+  font-size: 12px;
+  color: #606060;
+}
+
+/* Shorts Page */
+#shorts-tab {
+  height: calc(100vh - 56px); /* subtract top bar */
+  background: #f9f9f9;
+  display: flex;
+  width: 100%;
+  justify-items: center;
+  align-items: center;
+}
+
+.shorts-scroll {
+  height: 100%;
+  width: 40%;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none; /* hide scrollbar for Firefox */
+  -ms-overflow-style: none; /* hide scrollbar for IE and Edge */
+}
+
+.shorts-scroll::-webkit-scrollbar {
+  display: none; /* hide scrollbar for Chrome, Safari, and Opera */
+}
+
+.short {
+  position: relative;
+  height: 90%;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.short-video {
+  width: 100%;
+  height: 100%;
+  background: #ddd;
+  border-radius: 15px;
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #e6e6e6 25%, #f2f2f2 37%, #e6e6e6 63%);
+  background-size: 400% 100%;
+  animation: shimmer 1.4s ease infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.short-ui {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 16px;
+  pointer-events: none;
+}
+
+.short-info {
+  max-width: 70%;
+  color: #111;
+}
+
+.skeleton-text p {
+  height: 14px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  background: #e0e0e0;
+}
+
+.short-actions {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+}
+
+.action {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #2a2a2a;
+  border: none;
+}
